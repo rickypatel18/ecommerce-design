@@ -15,18 +15,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
 
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <style>
     /* CSS Grid for Products */
     .product-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      /* gap: 20px; */
       justify-content: center;
     }
 
     .product-card {
-      border: 1px solid #ddd;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      /* border-right: 1px solid #ddd; */
+      /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); */
       padding: 15px;
       display: flex;
       flex-direction: column;
@@ -61,26 +68,49 @@
     .product-card {
       border: 1px solid #ddd;
       padding: 1px;
-      /*  */
       text-align: center;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); */
     }
 
     .product-card img {
       max-width: 180px;
     }
 
+    .container::-webkit-scrollbar {
+      display: none;
+    }
 
+    @media (max-width: 992px) {
+      /* Medium Devices (Tablets) */
+      div[style*="grid-template-columns"] {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+      div[style*="grid-column: span 2;"] {
+        grid-column: span 2 !important;
+        grid-row: span 2 !important;
+      }
+    }
 
+    @media (max-width: 768px) {
+      /* Small Devices (Phones) */
+      div[style*="grid-template-columns"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      div[style*="grid-column: span 2;"] {
+        grid-column: span 2 !important;
+      }
+    }
   </style>
-  <body>
+
+  <body style="box-sizing: border-box; padding: 0px; margin: 0px">
     <!-- Top Header -->
-    <div class="container mt-4 px-3">
+    <div class="container mt-4" style="padding: 0px">
       <div class="container">
         <div class="row align-items-center text-center text-md-start gy-3">
           <!-- Logo & Ecobazar -->
           <div
             class="col-12 col-md-3 d-flex align-items-center justify-content-center justify-content-md-start"
+            style="padding: 0px"
           >
             <img src="./images/plant 1.png" alt="logo" width="40px" />
             <h2 class="ms-2 mb-0">Ecobazar</h2>
@@ -110,6 +140,7 @@
           <!-- Heart & Shopping Cart -->
           <div
             class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-end gap-4"
+            style="padding: 0px"
           >
             <i class="bi bi-heart fs-4"></i>
 
@@ -142,10 +173,11 @@
 
     <!-- Navigation Bar -->
     <nav
-      class="navbar navbar-expand-lg navbar-dark container"
+      class="navbar navbar-expand-lg navbar-dark container-fluid"
       style="background-color: #333333"
     >
-      <div class="container">
+      <!-- style="padding: 0px 28px 0px 20px" -->
+      <div class="container" style="padding: 0px">
         <!-- Navbar Toggle Button -->
         <button
           class="navbar-toggler"
@@ -156,25 +188,52 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav text-center">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Home</a>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarSupportedContent"
+          style="padding: 0px"
+        >
+          <ul
+            class="navbar-nav text-center"
+            style="
+              display: flex;
+              padding: 0px;
+              align-items: start;
+              justify-content: start;
+            "
+          >
+            <li class="nav-item" style="margin-right: 30px">
+              <a
+                class="nav-link active"
+                href="#"
+                style="padding: 7px 0px 10px 0px"
+                >Home</a
+              >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Shop</a>
+            <li class="nav-item" style="margin-right: 30px">
+              <a class="nav-link" href="#" style="padding: 7px 0px 10px 0px"
+                >Shop</a
+              >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pages</a>
+            <li class="nav-item" style="margin-right: 30px">
+              <a class="nav-link" href="#" style="padding: 7px 0px 10px 0px"
+                >Pages</a
+              >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
+            <li class="nav-item" style="margin-right: 30px">
+              <a class="nav-link" href="#" style="padding: 7px 0px 10px 0px"
+                >Blog</a
+              >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About us</a>
+            <li class="nav-item" style="margin-right: 30px">
+              <a class="nav-link" href="#" style="padding: 7px 0px 10px 0px"
+                >About us</a
+              >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact us</a>
+            <li class="nav-item" style="margin-right: 30px">
+              <a class="nav-link" href="#" style="padding: 7px 0px 10px 0px"
+                >Contact us</a
+              >
             </li>
           </ul>
         </div>
@@ -188,8 +247,8 @@
     </nav>
 
     <!-- Images section -->
-    <div class="container mt-4">
-      <div class="container">
+    <div class="container mt-4" style="padding: 0px">
+      <div class="container" style="padding: 0px">
         <div class="row justify-content-center">
           <!-- Big Banner (Full width on mobile/tablet, 65% on large screens) -->
           <div class="col-12 col-lg-8">
@@ -227,7 +286,15 @@
     </div>
 
     <!-- Service section -->
-    <div class="container py-3 d-flex justify-content-center">
+    <div
+      class="container py-3 d-flex justify-content-center"
+      style="
+        background-color: #ffffff;
+        box-shadow: 0px 8px 40px 0px #00260314;
+        padding: 0px;
+        margin-top: 20px;
+      "
+    >
       <div class="row justify-content-center align-items-center w-100 g-4">
         <!-- Service 1 -->
         <div
@@ -291,7 +358,7 @@
     </div>
 
     <!-- Popular Categories -->
-    <div class="container mt-4" style="padding: 30px">
+    <div class="container" style="padding: 0px; margin-top: 50px">
       <!-- Header Section -->
       <div class="row d-flex justify-content-between align-items-center">
         <div class="col-auto">
@@ -305,12 +372,12 @@
       </div>
 
       <!-- Categories Section -->
-      <div class="row mt-3 g-4">
+      <div class="row mt-1 g-4">
         <!-- Increased gap using g-4 -->
 
         <!-- Category Item 1 -->
         <div class="col-6 col-md-3 col-lg-2 text-center">
-          <div class="border border-1 p-3 rounded shadow-sm">
+          <div class="border border-1 p-3 shadow-sm" style="border-radius: 5px">
             <!-- Added spacing inside the card -->
             <img
               src="./images/image 1.png"
@@ -324,7 +391,7 @@
 
         <!-- Category Item 2 -->
         <div class="col-6 col-md-3 col-lg-2 text-center">
-          <div class="border border-1 p-3 rounded shadow-sm">
+          <div class="border border-1 p-3 shadow-sm" style="border-radius: 5px">
             <img
               src="./images/image 1.png"
               alt="Fresh Fruit"
@@ -337,7 +404,7 @@
 
         <!-- Category Item 3 -->
         <div class="col-6 col-md-3 col-lg-2 text-center">
-          <div class="border border-1 p-3 rounded shadow-sm">
+          <div class="border border-1 p-3 shadow-sm" style="border-radius: 5px">
             <img
               src="./images/image 1.png"
               alt="Fresh Fruit"
@@ -350,7 +417,7 @@
 
         <!-- Category Item 4 -->
         <div class="col-6 col-md-3 col-lg-2 text-center">
-          <div class="border border-1 p-3 rounded shadow-sm">
+          <div class="border border-1 p-3 shadow-sm" style="border-radius: 5px">
             <img
               src="./images/image 1.png"
               alt="Fresh Fruit"
@@ -363,7 +430,7 @@
 
         <!-- Category Item 5 -->
         <div class="col-6 col-md-3 col-lg-2 text-center">
-          <div class="border border-1 p-3 rounded shadow-sm">
+          <div class="border border-1 p-3 shadow-sm" style="border-radius: 5px">
             <img
               src="./images/image 1.png"
               alt="Fresh Fruit"
@@ -376,7 +443,7 @@
 
         <!-- Category Item 6 -->
         <div class="col-6 col-md-3 col-lg-2 text-center">
-          <div class="border border-1 p-3 rounded shadow-sm">
+          <div class="border border-1 p-3 shadow-sm" style="border-radius: 5px">
             <img
               src="./images/image 1.png"
               alt="Fresh Fruit"
@@ -389,7 +456,7 @@
 
         <!-- Category Item 7 -->
         <div class="col-6 col-md-3 col-lg-2 text-center">
-          <div class="border border-1 p-3 rounded shadow-sm">
+          <div class="border border-1 p-3 shadow-sm" style="border-radius: 5px">
             <img
               src="./images/image 1.png"
               alt="Fresh Fruit"
@@ -402,7 +469,7 @@
 
         <!-- Category Item 8 -->
         <div class="col-6 col-md-3 col-lg-2 text-center">
-          <div class="border border-1 p-3 rounded shadow-sm">
+          <div class="border border-1 p-3 shadow-sm" style="border-radius: 5px">
             <img
               src="./images/image 1.png"
               alt="Fresh Fruit"
@@ -415,7 +482,7 @@
 
         <!-- Category Item 9 -->
         <div class="col-6 col-md-3 col-lg-2 text-center">
-          <div class="border border-1 p-3 rounded shadow-sm">
+          <div class="border border-1 p-3 shadow-sm" style="border-radius: 5px">
             <img
               src="./images/image 1.png"
               alt="Fresh Fruit"
@@ -428,7 +495,7 @@
 
         <!-- Category Item 10 -->
         <div class="col-6 col-md-3 col-lg-2 text-center">
-          <div class="border border-1 p-3 rounded shadow-sm">
+          <div class="border border-1 p-3 shadow-sm" style="border-radius: 5px">
             <img
               src="./images/image 1.png"
               alt="Fresh Fruit"
@@ -441,7 +508,7 @@
 
         <!-- Category Item 11 -->
         <div class="col-6 col-md-3 col-lg-2 text-center">
-          <div class="border border-1 p-3 rounded shadow-sm">
+          <div class="border border-1 p-3 shadow-sm" style="border-radius: 5px">
             <img
               src="./images/image 1.png"
               alt="Fresh Fruit"
@@ -454,7 +521,7 @@
 
         <!-- Category Item 12 -->
         <div class="col-6 col-md-3 col-lg-2 text-center">
-          <div class="border border-1 p-3 rounded shadow-sm">
+          <div class="border border-1 p-3 shadow-sm" style="border-radius: 5px">
             <img
               src="./images/image 1.png"
               alt="Fresh Fruit"
@@ -468,7 +535,7 @@
     </div>
 
     <!-- Popular Products -->
-    <div class="container mt-4" style="padding: 30px">
+    <div class="container" style="padding: 0px; margin-top: 50px">
       <div class="row d-flex justify-content-between align-items-center">
         <div class="col-auto">
           <h3>Popular Products</h3>
@@ -478,8 +545,393 @@
           <img src="./images/Group.png" alt="" />
         </div>
       </div>
-      <div class="product-grid mt-3">
-        <div class="product-card">
+
+      <div class="product-grid mt-4">
+        <div class="product-card" style="padding: 15px 0px">
+          <img
+            src="./images/Product Image.png"
+            alt="Fresh Fruit"
+            width="200px"
+          />
+
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="product-card" style="padding: 15px 0px">
+          <img
+            src="./images/Product Image.png"
+            alt="Fresh Fruit"
+            width="200px"
+          />
+
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="product-card" style="padding: 15px 0px">
+          <img
+            src="./images/Product Image.png"
+            alt="Fresh Fruit"
+            width="200px"
+          />
+
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="product-card" style="padding: 15px 0px">
+          <img
+            src="./images/Product Image.png"
+            alt="Fresh Fruit"
+            width="200px"
+          />
+
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="product-card" style="padding: 15px 0px">
+          <img
+            src="./images/Product Image.png"
+            alt="Fresh Fruit"
+            width="200px"
+          />
+
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="product-card" style="padding: 15px 0px">
+          <img
+            src="./images/Product Image.png"
+            alt="Fresh Fruit"
+            width="200px"
+          />
+
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="product-card" style="padding: 15px 0px">
+          <img
+            src="./images/Product Image.png"
+            alt="Fresh Fruit"
+            width="200px"
+          />
+
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="product-card" style="padding: 15px 0px">
+          <img
+            src="./images/Product Image.png"
+            alt="Fresh Fruit"
+            width="200px"
+          />
+
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="product-card" style="padding: 15px 0px">
           <img
             src="./images/Product Image.png"
             alt="Fresh Fruit"
@@ -526,7 +978,7 @@
             </div>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" style="padding: 15px 0px">
           <img
             src="./images/Product Image.png"
             alt="Fresh Fruit"
@@ -540,382 +992,7 @@
               justify-content: space-between;
               width: 100%;
               padding: 0px 10px;
-            "
-          >
-            <div
-              style="
-                display: flex;
-                align-items: start;
-                flex-direction: column;
-                justify-content: center;
-              "
-            >
-              <p class="">Green Apple</p>
-              <p>$14.99</p>
-              <img src="./images/Rating.png" alt="" />
-            </div>
-            <div
-              style="
-                display: flex;
-                width: 50px;
-                height: 50px;
-                background-color: #f2f2f2;
-                border-radius: 50%;
-                align-items: center;
-                justify-content: center;
-              "
-            >
-              <img
-                src="./images/bag-icon.png"
-                alt=""
-                style="width: 25px; height: 25px"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="./images/Product Image.png"
-            alt="Fresh Fruit"
-            width="200px"
-          />
-
-          <div
-            style="
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              width: 100%;
-              padding: 0px 10px;
-            "
-          >
-            <div
-              style="
-                display: flex;
-                align-items: start;
-                flex-direction: column;
-                justify-content: center;
-              "
-            >
-              <p class="">Green Apple</p>
-              <p>$14.99</p>
-              <img src="./images/Rating.png" alt="" />
-            </div>
-            <div
-              style="
-                display: flex;
-                width: 50px;
-                height: 50px;
-                background-color: #f2f2f2;
-                border-radius: 50%;
-                align-items: center;
-                justify-content: center;
-              "
-            >
-              <img
-                src="./images/bag-icon.png"
-                alt=""
-                style="width: 25px; height: 25px"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="./images/Product Image.png"
-            alt="Fresh Fruit"
-            width="200px"
-          />
-
-          <div
-            style="
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              width: 100%;
-              padding: 0px 10px;
-            "
-          >
-            <div
-              style="
-                display: flex;
-                align-items: start;
-                flex-direction: column;
-                justify-content: center;
-              "
-            >
-              <p class="">Green Apple</p>
-              <p>$14.99</p>
-              <img src="./images/Rating.png" alt="" />
-            </div>
-            <div
-              style="
-                display: flex;
-                width: 50px;
-                height: 50px;
-                background-color: #f2f2f2;
-                border-radius: 50%;
-                align-items: center;
-                justify-content: center;
-              "
-            >
-              <img
-                src="./images/bag-icon.png"
-                alt=""
-                style="width: 25px; height: 25px"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="./images/Product Image.png"
-            alt="Fresh Fruit"
-            width="200px"
-          />
-
-          <div
-            style="
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              width: 100%;
-              padding: 0px 10px;
-            "
-          >
-            <div
-              style="
-                display: flex;
-                align-items: start;
-                flex-direction: column;
-                justify-content: center;
-              "
-            >
-              <p class="">Green Apple</p>
-              <p>$14.99</p>
-              <img src="./images/Rating.png" alt="" />
-            </div>
-            <div
-              style="
-                display: flex;
-                width: 50px;
-                height: 50px;
-                background-color: #f2f2f2;
-                border-radius: 50%;
-                align-items: center;
-                justify-content: center;
-              "
-            >
-              <img
-                src="./images/bag-icon.png"
-                alt=""
-                style="width: 25px; height: 25px"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="./images/Product Image.png"
-            alt="Fresh Fruit"
-            width="200px"
-          />
-
-          <div
-            style="
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              width: 100%;
-              padding: 0px 10px;
-            "
-          >
-            <div
-              style="
-                display: flex;
-                align-items: start;
-                flex-direction: column;
-                justify-content: center;
-              "
-            >
-              <p class="">Green Apple</p>
-              <p>$14.99</p>
-              <img src="./images/Rating.png" alt="" />
-            </div>
-            <div
-              style="
-                display: flex;
-                width: 50px;
-                height: 50px;
-                background-color: #f2f2f2;
-                border-radius: 50%;
-                align-items: center;
-                justify-content: center;
-              "
-            >
-              <img
-                src="./images/bag-icon.png"
-                alt=""
-                style="width: 25px; height: 25px"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="./images/Product Image.png"
-            alt="Fresh Fruit"
-            width="200px"
-          />
-
-          <div
-            style="
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              width: 100%;
-              padding: 0px 10px;
-            "
-          >
-            <div
-              style="
-                display: flex;
-                align-items: start;
-                flex-direction: column;
-                justify-content: center;
-              "
-            >
-              <p class="">Green Apple</p>
-              <p>$14.99</p>
-              <img src="./images/Rating.png" alt="" />
-            </div>
-            <div
-              style="
-                display: flex;
-                width: 50px;
-                height: 50px;
-                background-color: #f2f2f2;
-                border-radius: 50%;
-                align-items: center;
-                justify-content: center;
-              "
-            >
-              <img
-                src="./images/bag-icon.png"
-                alt=""
-                style="width: 25px; height: 25px"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="./images/Product Image.png"
-            alt="Fresh Fruit"
-            width="200px"
-          />
-
-          <div
-            style="
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              width: 100%;
-              padding: 0px 10px;
-            "
-          >
-            <div
-              style="
-                display: flex;
-                align-items: start;
-                flex-direction: column;
-                justify-content: center;
-              "
-            >
-              <p class="">Green Apple</p>
-              <p>$14.99</p>
-              <img src="./images/Rating.png" alt="" />
-            </div>
-            <div
-              style="
-                display: flex;
-                width: 50px;
-                height: 50px;
-                background-color: #f2f2f2;
-                border-radius: 50%;
-                align-items: center;
-                justify-content: center;
-              "
-            >
-              <img
-                src="./images/bag-icon.png"
-                alt=""
-                style="width: 25px; height: 25px"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="./images/Product Image.png"
-            alt="Fresh Fruit"
-            width="200px"
-          />
-
-          <div
-            style="
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              width: 100%;
-              padding: 0px 10px;
-            "
-          >
-            <div
-              style="
-                display: flex;
-                align-items: start;
-                flex-direction: column;
-                justify-content: center;
-              "
-            >
-              <p class="">Green Apple</p>
-              <p>$14.99</p>
-              <img src="./images/Rating.png" alt="" />
-            </div>
-            <div
-              style="
-                display: flex;
-                width: 50px;
-                height: 50px;
-                background-color: #f2f2f2;
-                border-radius: 50%;
-                align-items: center;
-                justify-content: center;
-              "
-            >
-              <img
-                src="./images/bag-icon.png"
-                alt=""
-                style="width: 25px; height: 25px"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="product-card">
-          <img
-            src="./images/Product Image.png"
-            alt="Fresh Fruit"
-            width="200px"
-          />
-
-          <div
-            style="
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              width: 100%;
-              padding: 0px 10px;
+              align-items: center;
             "
           >
             <div
@@ -953,13 +1030,14 @@
     </div>
 
     <!-- Offer section -->
-    <div class="container mt-4" style="padding: 30px">
+    <div class="container" style="padding: 0px; margin-top: 50px">
       <div class="row g-4">
         <div class="col-12 col-md-6 col-lg-4">
           <img
             src="./images/offer.png"
             alt="Offer Image"
             class="img-fluid w-100"
+            style="border-radius: 8px"
           />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
@@ -967,6 +1045,7 @@
             src="./images/offer.png"
             alt="Offer Image"
             class="img-fluid w-100"
+            style="border-radius: 8px"
           />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
@@ -974,91 +1053,727 @@
             src="./images/offer.png"
             alt="Offer Image"
             class="img-fluid w-100"
+            style="border-radius: 8px"
           />
         </div>
       </div>
     </div>
 
     <!-- Hot Deals section -->
-    <div class="container mt-4" style="padding: 30px; max-width: 1200px; margin: auto;">
-      <div class="row d-flex justify-content-between align-items-center" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+    <div class="container" style="padding: 0px; margin-top: 50px">
+      <div
+        class="row d-flex justify-content-between align-items-center"
+        style="margin-bottom: 20px"
+      >
         <div class="col-auto">
-          <h3 style="margin: 0;">Hot Deals</h3>
+          <h3 style="margin: 0">Hot Deals</h3>
         </div>
-        <div class="col-auto d-flex align-items-center gap-2" style="display: flex; align-items: center; gap: 10px;">
-          <p class="mb-0" style="margin: 0; cursor: pointer; color: #007bff;">View All</p>
-          <img src="./images/Group.png" alt="" style="width: 20px; height: 20px;">
+        <div
+          class="col-auto d-flex align-items-center gap-2"
+          style="cursor: pointer; color: #007bff"
+        >
+          <p class="mb-0">View All</p>
+          <img
+            src="./images/Group.png"
+            alt=""
+            style="width: 20px; height: 20px"
+          />
         </div>
       </div>
-    
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; background-color: #fff; padding: 15px;">
-        
-        <div class="product-card" style="border: 1px solid #ddd; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 15px;">
-          <img src="./images/Image.png" alt="Fresh Fruit" style="width: 60%; object-fit: cover;">
-          <div style="text-align: center;">
-            <p style="font-size: 20px; color: #00b207; margin: 10px 0 5px;">Chinese cabbage</p>
-            <div style="display: flex; gap: 10px;">
-              <span style="color: red;">$14.99</span> <span style="text-decoration: line-through; color: gray;">$24.00</span>
+
+      <!-- Product Grid -->
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          background-color: #fff;
+        "
+      >
+        <!-- Large Product (Big Image) -->
+        <div
+          style="
+            border: 1px solid #ddd;
+            /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-column: span 2;
+            grid-row: span 2;
+            text-align: center;
+            justify-content: center;
+          "
+        >
+          <img
+            src="./images/Image.png"
+            alt="Big Product"
+            style="width: 100%; object-fit: cover"
+          />
+          <div>
+            <p style="font-size: 20px; color: #00b207; margin: 10px 0 5px">
+              Chinese cabbage
+            </p>
+            <div style="display: flex; gap: 10px">
+              <span style="color: red">$14.99</span>
+              <span style="text-decoration: line-through; color: gray"
+                >$24.00</span
+              >
             </div>
-            <div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
-              <img src="./images/Rating.png" alt="" style="width: 100px;">
-              <span style="font-size: 12px; color: gray;">(524 Feedback)</span>
+            <div
+              style="
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img src="./images/Rating.png" alt="" style="width: 100px" />
+              <span style="font-size: 12px; color: gray">(524 Feedback)</span>
             </div>
-            <p style="color: red;">Hurry up! Offer ends soon.</p>
+            <p style="color: red">Hurry up! Offer ends soon.</p>
           </div>
         </div>
-    
-        <!-- Repeated Product Card -->
-        <div class="product-card" style="border: 1px solid #ddd; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); padding: 15px; display: flex; flex-direction: column; align-items: center;">
-          <img src="./images/Product Image.png" alt="Fresh Fruit" style="width: 60%; object-fit: cover;">
-          <div style="text-align: center;">
-            <p style="margin: 10px 0 5px;">Green Apple</p>
-            <p style="color: red;">$14.99</p>
-            <img src="./images/Rating.png" alt="" style="width: 100px;">
-          </div>
-          <div style="display: flex; width: 50px; height: 50px; background-color: #f2f2f2; border-radius: 50%; align-items: center; justify-content: center; margin-top: 10px;">
-            <img src="./images/bag-icon.png" alt="" style="width: 25px; height: 25px;">
+
+        <!-- Small Product Cards -->
+        <div
+          class="product-card"
+          style="
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+          "
+        >
+          <img
+            src="./images/Product Image.png"
+            alt="Product 1"
+            style="width: 100%; object-fit: cover"
+          />
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
           </div>
         </div>
-    
-        <div class="product-card" style="border: 1px solid #ddd; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); padding: 15px; display: flex; flex-direction: column; align-items: center;">
-          <img src="./images/Product Image.png" alt="Fresh Fruit" style="width: 60%; object-fit: cover;">
-          <div style="text-align: center;">
-            <p style="margin: 10px 0 5px;">Green Apple</p>
-            <p style="color: red;">$14.99</p>
-            <img src="./images/Rating.png" alt="" style="width: 100px;">
-          </div>
-          <div style="display: flex; width: 50px; height: 50px; background-color: #f2f2f2; border-radius: 50%; align-items: center; justify-content: center; margin-top: 10px;">
-            <img src="./images/bag-icon.png" alt="" style="width: 25px; height: 25px;">
+        <div
+          class="product-card"
+          style="
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+          "
+        >
+          <img
+            src="./images/Product Image.png"
+            alt="Product 1"
+            style="width: 100%; object-fit: cover"
+          />
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
           </div>
         </div>
-    
-        <div class="product-card" style="border: 1px solid #ddd; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); padding: 15px; display: flex; flex-direction: column; align-items: center;">
-          <img src="./images/Product Image.png" alt="Fresh Fruit" style="width: 60%; object-fit: cover;">
-          <div style="text-align: center;">
-            <p style="margin: 10px 0 5px;">Green Apple</p>
-            <p style="color: red;">$14.99</p>
-            <img src="./images/Rating.png" alt="" style="width: 100px;">
+        <div
+          class="product-card"
+          style="
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+          "
+        >
+          <img
+            src="./images/Product Image.png"
+            alt="Product 1"
+            style="width: 100%; object-fit: cover"
+          />
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
           </div>
-          <div style="display: flex; width: 50px; height: 50px; background-color: #f2f2f2; border-radius: 50%; align-items: center; justify-content: center; margin-top: 10px;">
-            <img src="./images/bag-icon.png" alt="" style="width: 25px; height: 25px;">
+        </div>
+        <div
+          class="product-card"
+          style="
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+          "
+        >
+          <img
+            src="./images/Product Image.png"
+            alt="Product 1"
+            style="width: 100%; object-fit: cover"
+          />
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="product-card"
+          style="
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+          "
+        >
+          <img
+            src="./images/Product Image.png"
+            alt="Product 1"
+            style="width: 100%; object-fit: cover"
+          />
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="product-card"
+          style="
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+          "
+        >
+          <img
+            src="./images/Product Image.png"
+            alt="Product 1"
+            style="width: 100%; object-fit: cover"
+          />
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="product-card"
+          style="
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+          "
+        >
+          <img
+            src="./images/Product Image.png"
+            alt="Product 1"
+            style="width: 100%; object-fit: cover"
+          />
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="product-card"
+          style="
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+          "
+        >
+          <img
+            src="./images/Product Image.png"
+            alt="Product 1"
+            style="width: 100%; object-fit: cover"
+          />
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="product-card"
+          style="
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+          "
+        >
+          <img
+            src="./images/Product Image.png"
+            alt="Product 1"
+            style="width: 100%; object-fit: cover"
+          />
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="product-card"
+          style="
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+          "
+        >
+          <img
+            src="./images/Product Image.png"
+            alt="Product 1"
+            style="width: 100%; object-fit: cover"
+          />
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="product-card"
+          style="
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+          "
+        >
+          <img
+            src="./images/Product Image.png"
+            alt="Product 1"
+            style="width: 100%; object-fit: cover"
+          />
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              padding: 0px 10px;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p class="">Green Apple</p>
+              <p>$14.99</p>
+              <img src="./images/Rating.png" alt="" />
+            </div>
+            <div
+              style="
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="./images/bag-icon.png"
+                alt=""
+                style="width: 25px; height: 25px"
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
-    
 
     <!-- Discount section  -->
-    <div style="width: 100%; overflow: hidden; margin-top: 40px">
+    <div
+      class="container"
+      style="width: 100%; overflow: hidden; margin-top: 40px; padding: 0px"
+    >
       <img
         src="./images/Discount Bannar.png"
         alt="Discount Banner"
-        style="width: 100%; height: auto; display: block"
+        style="
+          width: 100%;
+          height: auto;
+          min-height: 250px;
+          object-fit: cover;
+          display: block;
+          border-radius: 10px;
+        "
       />
     </div>
 
     <!-- Featured Products section  -->
-    <div class="container mt-4" style="padding: 30px">
+    <div class="container" style="padding: 0px; margin-top: 50px">
       <div class="row d-flex justify-content-between align-items-center">
         <div class="col-auto">
           <h3>Featured Products</h3>
@@ -1068,8 +1783,8 @@
           <img src="./images/Group.png" alt="" />
         </div>
       </div>
-      <div class="product-grid mt-3">
-        <div class="product-card">
+      <div class="product-grid mt-4">
+        <div class="product-card" style="padding: 15px 0px">
           <img
             src="./images/Product Image.png"
             alt="Fresh Fruit"
@@ -1083,6 +1798,7 @@
               justify-content: space-between;
               width: 100%;
               padding: 0px 10px;
+              align-items: center;
             "
           >
             <div
@@ -1116,7 +1832,7 @@
             </div>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" style="padding: 15px 0px">
           <img
             src="./images/Product Image.png"
             alt="Fresh Fruit"
@@ -1130,6 +1846,7 @@
               justify-content: space-between;
               width: 100%;
               padding: 0px 10px;
+              align-items: center;
             "
           >
             <div
@@ -1163,7 +1880,7 @@
             </div>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" style="padding: 15px 0px">
           <img
             src="./images/Product Image.png"
             alt="Fresh Fruit"
@@ -1177,6 +1894,7 @@
               justify-content: space-between;
               width: 100%;
               padding: 0px 10px;
+              align-items: center;
             "
           >
             <div
@@ -1210,7 +1928,7 @@
             </div>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" style="padding: 15px 0px">
           <img
             src="./images/Product Image.png"
             alt="Fresh Fruit"
@@ -1224,6 +1942,7 @@
               justify-content: space-between;
               width: 100%;
               padding: 0px 10px;
+              align-items: center;
             "
           >
             <div
@@ -1257,7 +1976,7 @@
             </div>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" style="padding: 15px 0px">
           <img
             src="./images/Product Image.png"
             alt="Fresh Fruit"
@@ -1271,6 +1990,8 @@
               justify-content: space-between;
               width: 100%;
               padding: 0px 10px;
+              align-items: center;
+              border: 1px solid red;
             "
           >
             <div
@@ -1308,74 +2029,81 @@
     </div>
 
     <!--Latest news section -->
-    <div class="container mt-4">
+    <div class="container" style="padding: 0px; margin-top: 50px">
       <h2 style="display: flex; align-items: center; justify-content: center">
         Latest news
       </h2>
-      <div class="row g-4">
+      <div class="row g-4 mt-2">
         <!-- Card 1 -->
-        <div class="col-12 col-md-4">
-          <div class="shadow-sm p-3 border">
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="shadow-sm w-100">
             <img
               src="./images/latestnews.png"
               alt="Offer Image"
               class="img-fluid w-100"
             />
-            <div class="mt-3 d-flex flex-column align-items-start gap-2">
-              <div class="d-flex">
+            <div
+              class="mt-3 d-flex flex-column align-items-start gap-1"
+              style="padding: 10px 30px 20px 30px"
+            >
+              <div class="d-flex flex-wrap">
                 <img src="./images/Categories.png" alt="" />
                 <img src="./images/Admin.png" alt="" />
                 <img src="./images/Comments.png" alt="" />
               </div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
               <div class="d-flex align-items-center gap-2">
-                <p class="mb-0 text-success">View All</p>
+                <p class="mb-0 text-success">Read More</p>
                 <img src="./images/Group.png" alt="" />
               </div>
             </div>
           </div>
         </div>
-
         <!-- Card 2 -->
-        <div class="col-12 col-md-4">
-          <div class="shadow-sm p-3 border">
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="shadow-sm w-100">
             <img
               src="./images/latestnews.png"
               alt="Offer Image"
               class="img-fluid w-100"
             />
-            <div class="mt-3 d-flex flex-column align-items-start gap-2">
-              <div class="d-flex">
+            <div
+              class="mt-3 d-flex flex-column align-items-start gap-1"
+              style="padding: 10px 30px 20px 30px"
+            >
+              <div class="d-flex flex-wrap">
                 <img src="./images/Categories.png" alt="" />
                 <img src="./images/Admin.png" alt="" />
                 <img src="./images/Comments.png" alt="" />
               </div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
               <div class="d-flex align-items-center gap-2">
-                <p class="mb-0 text-success">View All</p>
+                <p class="mb-0 text-success">Read More</p>
                 <img src="./images/Group.png" alt="" />
               </div>
             </div>
           </div>
         </div>
-
         <!-- Card 3 -->
-        <div class="col-12 col-md-4">
-          <div class="shadow-sm p-3 border">
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="shadow-sm w-100">
             <img
               src="./images/latestnews.png"
               alt="Offer Image"
               class="img-fluid w-100"
             />
-            <div class="mt-3 d-flex flex-column align-items-start gap-2">
-              <div class="d-flex">
+            <div
+              class="mt-3 d-flex flex-column align-items-start gap-1"
+              style="padding: 10px 30px 20px 30px"
+            >
+              <div class="d-flex flex-wrap">
                 <img src="./images/Categories.png" alt="" />
                 <img src="./images/Admin.png" alt="" />
                 <img src="./images/Comments.png" alt="" />
               </div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
               <div class="d-flex align-items-center gap-2">
-                <p class="mb-0 text-success">View All</p>
+                <p class="mb-0 text-success">Read More</p>
                 <img src="./images/Group.png" alt="" />
               </div>
             </div>
@@ -1385,15 +2113,20 @@
     </div>
 
     <!-- Client Testimonials section -->
-    <div class="container mt-4" style="padding: 30px">
+    <div class="container" style="padding: 0px; margin-top: 50px">
       <!-- Header -->
       <div class="row d-flex justify-content-between align-items-center">
         <div class="col-auto">
-          <h3>Hot Deals</h3>
+          <h3>Client Testimonials</h3>
         </div>
         <div class="col-auto d-flex align-items-center gap-2">
           <div
-            style="display: flex; justify-content: space-between; width: 120px"
+            style="
+              display: flex;
+              justify-content: space-between;
+              width: 120px;
+              padding: 0px;
+            "
           >
             <div
               style="
@@ -1426,10 +2159,10 @@
       </div>
 
       <!-- Cards Section (Responsive) -->
-      <div class="container mt-4">
+      <div class="container mt-4" style="padding: 0px">
         <div class="row g-4">
           <div class="col-12 col-md-4">
-            <div class="shadow-sm p-3 border rounded">
+            <div class="p-3 border" style="border-radius: 8px">
               <div class="text-start">
                 <img src="./images/Vector.png" alt="" class="img-fluid" />
               </div>
@@ -1440,14 +2173,14 @@
               </p>
               <div
                 class="d-flex justify-content-between align-items-center"
-                style="margin-top: 30px"
+                style="margin: 25px 0px 10px 0px"
               >
                 <div class="d-flex align-items-center gap-2">
                   <img
                     src="./images/avatar.png"
                     alt=""
                     class="rounded-circle"
-                    width="40px"
+                    width="50px"
                   />
                   <div>
                     <p class="mb-0 fw-bold">Robert Fox</p>
@@ -1464,7 +2197,7 @@
             </div>
           </div>
           <div class="col-12 col-md-4">
-            <div class="shadow-sm p-3 border rounded">
+            <div class="p-3 border" style="border-radius: 8px">
               <div class="text-start">
                 <img src="./images/Vector.png" alt="" class="img-fluid" />
               </div>
@@ -1475,14 +2208,14 @@
               </p>
               <div
                 class="d-flex justify-content-between align-items-center"
-                style="margin-top: 30px"
+                style="margin: 25px 0px 10px 0px"
               >
                 <div class="d-flex align-items-center gap-2">
                   <img
                     src="./images/avatar.png"
                     alt=""
                     class="rounded-circle"
-                    width="40px"
+                    width="50px"
                   />
                   <div>
                     <p class="mb-0 fw-bold">Robert Fox</p>
@@ -1499,7 +2232,7 @@
             </div>
           </div>
           <div class="col-12 col-md-4">
-            <div class="shadow-sm p-3 border rounded">
+            <div class="p-3 border" style="border-radius: 8px">
               <div class="text-start">
                 <img src="./images/Vector.png" alt="" class="img-fluid" />
               </div>
@@ -1510,14 +2243,14 @@
               </p>
               <div
                 class="d-flex justify-content-between align-items-center"
-                style="margin-top: 30px"
+                style="margin: 25px 0px 10px 0px"
               >
                 <div class="d-flex align-items-center gap-2">
                   <img
                     src="./images/avatar.png"
                     alt=""
                     class="rounded-circle"
-                    width="40px"
+                    width="50px"
                   />
                   <div>
                     <p class="mb-0 fw-bold">Robert Fox</p>
@@ -1538,211 +2271,232 @@
     </div>
 
     <!-- Carousal section -->
-
-    <div class="container mt-4">
-      <div class="row justify-content-center align-items-center g-0">
+    <div
+      class="container"
+      style="
+        padding: 0px;
+        margin-top: 50px;
+        overflow-x: auto;
+        white-space: nowrap;
+      "
+    >
+      <div
+        class="d-flex align-items-center"
+        style="
+          gap: 20px;
+          flex-wrap: nowrap;
+          padding: 15px 0px;
+          justify-content: space-between;
+        "
+      >
         <!-- Image 1 -->
-        <div class="col-6 col-md-4 col-lg-2 text-center">
-          <img
-            src="./images/c1.png"
-            alt="Image 1"
-            class="img-fluid"
-            style="max-width: 120px; height: auto"
-          />
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <img
-            src="./images/Line 9.png"
-            alt="Divider"
-            class="img-fluid"
-            style="max-width: 50px"
-          />
-        </div>
+        <img
+          src="./images/c1.png"
+          alt="Image 1"
+          class="img-fluid"
+          style="max-width: 120px; height: auto; margin-right: 10px"
+        />
+        <img
+          src="./images/Line 9.png"
+          alt="Divider"
+          class="img-fluid"
+          style="max-width: 50px; margin-right: 10px"
+        />
 
         <!-- Image 2 -->
-        <div class="col-6 col-md-4 col-lg-2 text-center">
-          <img
-            src="./images/c3.png"
-            alt="Image 2"
-            class="img-fluid"
-            style="max-width: 120px; height: auto"
-          />
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <img
-            src="./images/Line 9.png"
-            alt="Divider"
-            class="img-fluid"
-            style="max-width: 50px"
-          />
-        </div>
+        <img
+          src="./images/c3.png"
+          alt="Image 2"
+          class="img-fluid"
+          style="max-width: 120px; height: auto; margin-right: 10px"
+        />
+        <img
+          src="./images/Line 9.png"
+          alt="Divider"
+          class="img-fluid"
+          style="max-width: 50px; margin-right: 10px"
+        />
 
         <!-- Image 3 -->
-        <div class="col-6 col-md-4 col-lg-2 text-center">
-          <img
-            src="./images/c4.png"
-            alt="Image 3"
-            class="img-fluid"
-            style="max-width: 120px; height: auto"
-          />
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <img
-            src="./images/Line 9.png"
-            alt="Divider"
-            class="img-fluid"
-            style="max-width: 50px"
-          />
-        </div>
+        <img
+          src="./images/c4.png"
+          alt="Image 3"
+          class="img-fluid"
+          style="max-width: 120px; height: auto; margin-right: 10px"
+        />
+        <img
+          src="./images/Line 9.png"
+          alt="Divider"
+          class="img-fluid"
+          style="max-width: 50px; margin-right: 10px"
+        />
 
         <!-- Image 4 -->
-        <div class="col-6 col-md-4 col-lg-2 text-center">
-          <img
-            src="./images/c9.png"
-            alt="Image 4"
-            class="img-fluid"
-            style="max-width: 120px; height: auto"
-          />
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <img
-            src="./images/Line 9.png"
-            alt="Divider"
-            class="img-fluid"
-            style="max-width: 50px"
-          />
-        </div>
+        <img
+          src="./images/c9.png"
+          alt="Image 4"
+          class="img-fluid"
+          style="max-width: 120px; height: auto; margin-right: 10px"
+        />
+        <img
+          src="./images/Line 9.png"
+          alt="Divider"
+          class="img-fluid"
+          style="max-width: 50px; margin-right: 10px"
+        />
 
-        <!-- Image 5 (No Divider after last image) -->
-        <div class="col-6 col-md-4 col-lg-2 text-center">
-          <img
-            src="./images/c6.png"
-            alt="Image 5"
-            class="img-fluid"
-            style="max-width: 120px; height: auto"
-          />
-        </div>
+        <!-- Image 5 -->
+        <img
+          src="./images/c6.png"
+          alt="Image 5"
+          class="img-fluid"
+          style="max-width: 120px; height: auto; margin-right: 10px"
+        />
+        <img
+          src="./images/Line 9.png"
+          alt="Divider"
+          class="img-fluid"
+          style="max-width: 50px; margin-right: 10px"
+        />
+
+        <!-- Image 6 (No Divider after last image) -->
+        <img
+          src="./images/c7.png"
+          alt="Image 6"
+          class="img-fluid"
+          style="max-width: 120px; height: auto"
+        />
       </div>
     </div>
 
     <!-- Instagram Section -->
-    <div class="container mt-4">
+    <div class="container" style="padding: 0px; margin-top: 50px">
       <h2 class="text-center">Follow us on Instagram</h2>
-      <div class="row g-4 justify-content-center">
+
+      <div class="row g-4 mt-2 justify-content-center">
         <!-- Image 1 -->
-        <div class="col-6 col-md-4 col-lg-2">
-          <div class="shadow-sm p-3">
-            <img
-              src="./images/Instagram Post.png"
-              alt="Instagram Post"
-              class="img-fluid w-100"
-            />
-          </div>
+        <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center">
+          <img
+            src="./images/Instagram Post.png"
+            alt="Instagram Post"
+            class="img-fluid w-100"
+          />
         </div>
 
         <!-- Image 2 -->
-        <div class="col-6 col-md-4 col-lg-2">
-          <div class="shadow-sm p-3">
-            <img
-              src="./images/Instagram Post.png"
-              alt="Instagram Post"
-              class="img-fluid w-100"
-            />
-          </div>
+        <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center">
+          <img
+            src="./images/Instagram Post.png"
+            alt="Instagram Post"
+            class="img-fluid w-100"
+          />
         </div>
 
         <!-- Image 3 -->
-        <div class="col-6 col-md-4 col-lg-2">
-          <div class="shadow-sm p-3">
-            <img
-              src="./images/Instagram Post.png"
-              alt="Instagram Post"
-              class="img-fluid w-100"
-            />
-          </div>
+        <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center">
+          <img
+            src="./images/Instagram Post.png"
+            alt="Instagram Post"
+            class="img-fluid w-100"
+          />
         </div>
 
         <!-- Image 4 -->
-        <div class="col-6 col-md-4 col-lg-2">
-          <div class="shadow-sm p-3">
-            <img
-              src="./images/Instagram Post.png"
-              alt="Instagram Post"
-              class="img-fluid w-100"
-            />
-          </div>
+        <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center">
+          <img
+            src="./images/Instagram Post.png"
+            alt="Instagram Post"
+            class="img-fluid w-100"
+          />
         </div>
 
         <!-- Image 5 -->
-        <div class="col-6 col-md-4 col-lg-2">
-          <div class="shadow-sm p-3">
-            <img
-              src="./images/Instagram Post.png"
-              alt="Instagram Post"
-              class="img-fluid w-100"
-            />
-          </div>
+        <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center">
+          <img
+            src="./images/Instagram Post.png"
+            alt="Instagram Post"
+            class="img-fluid w-100"
+          />
         </div>
 
         <!-- Image 6 -->
-        <div class="col-6 col-md-4 col-lg-2">
-          <div class="shadow-sm p-3">
-            <img
-              src="./images/Instagram Post.png"
-              alt="Instagram Post"
-              class="img-fluid w-100"
-            />
-          </div>
+        <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center">
+          <img
+            src="./images/Instagram Post.png"
+            alt="Instagram Post"
+            class="img-fluid w-100"
+          />
         </div>
       </div>
     </div>
 
     <!-- Footer section -->
-    <div class="footer" style="background-color: #f8f9fa; padding: 40px 20px">
-      <!-- Upper Section -->
-      <div
-        class="upper d-flex flex-wrap justify-content-between align-items-center"
-        style="border-bottom: 1px solid #ddd; padding-bottom: 20px; gap: 20px"
-      >
-        <div class="subscribe" style="max-width: 300px">
-          <p style="margin: 0; font-weight: bold">
-            Subscribe to our Newsletter
-          </p>
-          <p style="margin: 0">
-            Pellentesque eu nibh eget mauris congue mattis mattis nec tellus.
-            Phasellus imperdiet elit eu magna.
-          </p>
-        </div>
+    <!-- Upper Section -->
+    <div
+      class="container upper d-flex flex-wrap justify-content-between align-items-center"
+      style="padding: 20px 0; gap: 20px; margin-top: 50px"
+    >
+      <!-- Subscribe Section -->
+      <div class="subscribe" style="max-width: 400px">
+        <h5 style="margin: 0; font-weight: bold">
+          Subscribe to our Newsletter
+        </h5>
+        <p style="margin: 10px 0px 0px 0px">
+          Pellentesque eu nibh eget mauris congue mattis mattis nec tellus.
+          Phasellus imperdiet elit eu magna.
+        </p>
+      </div>
 
-        <div class="address col-12 col-md-5">
-          <div class="input-group w-100" style="position: relative">
+      <!-- Search Bar + Social Icons (Side by Side on Small Screens) -->
+      <div
+        class="d-md-flex align-items-center justify-content-md-between gap-3 col-12 col-md-12"
+      >
+        <!-- Search Bar -->
+        <div class="address w-100">
+          <div
+            class="input-group w-100"
+            style="position: relative; display: flex; align-items: center"
+          >
             <input
               type="text"
               class="form-control"
-              placeholder="Search..."
+              placeholder="Your email address"
               aria-label="Search"
-              style="border-radius: 50px; padding: 12px 50px 12px 20px"
-            />
-
-            <button
-              class="position-absolute end-0 top-50 translate-middle-y text-white border-0"
               style="
+                border-radius: 47px;
+                padding: 12px 50px 12px 20px;
+                flex: 1;
+                outline: none;
+                border: 1px solid #ccc;
+              "
+            />
+            <button
+              style="
+                position: absolute;
                 background-color: #00b207;
-                border-radius: 50%;
-                width: 40px;
-                height: 40px;
+                border-radius: 47px;
+                width: 100px;
+                height: 48px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
+                border: none;
+                color: white;
+                font-weight: bold;
+                transition: all 0.3s ease-in-out;
+                right: 0;
               "
             >
-              <i class="bi bi-search"></i>
+              Subscribe
             </button>
           </div>
         </div>
 
-        <div class="social d-flex gap-3">
+        <!-- Social Media Icons -->
+        <div
+          class="social d-flex gap-2 justify-content-center justify-content-md-start"
+        >
           <div
             style="
               display: flex;
@@ -1752,11 +2506,12 @@
               align-items: center;
               justify-content: center;
               transition: 0.3s;
+              cursor: pointer;
             "
             onmouseover="this.style.backgroundColor='#00b207'"
             onmouseout="this.style.backgroundColor='transparent'"
           >
-            <img src="./images/facebook 1.png" alt="" style="width: 20px" />
+            <i class="fa-brands fa-facebook-f"></i>
           </div>
           <div
             style="
@@ -1767,6 +2522,7 @@
               align-items: center;
               justify-content: center;
               transition: 0.3s;
+              cursor: pointer;
             "
             onmouseover="this.style.backgroundColor='#00b207'"
             onmouseout="this.style.backgroundColor='transparent'"
@@ -1782,6 +2538,7 @@
               align-items: center;
               justify-content: center;
               transition: 0.3s;
+              cursor: pointer;
             "
             onmouseover="this.style.backgroundColor='#00b207'"
             onmouseout="this.style.backgroundColor='transparent'"
@@ -1797,6 +2554,7 @@
               align-items: center;
               justify-content: center;
               transition: 0.3s;
+              cursor: pointer;
             "
             onmouseover="this.style.backgroundColor='#00b207'"
             onmouseout="this.style.backgroundColor='transparent'"
@@ -1805,170 +2563,185 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Dipper Section -->
-      <div class="dipper mt-4">
-        <div class="up d-flex flex-wrap justify-content-between">
-          <div class="company" style="max-width: 300px">
-            <div class="d-flex align-items-center">
-              <img src="./images/plant 1.png" alt="" width="30px" />
-              <p style="margin-left: 10px; font-weight: bold">Ecobazar</p>
+    <!-- Dipper Section -->
+    <div
+      class="container-fluid"
+      style="background-color: #1a1a1a; color: white; padding-top: 20px"
+    >
+      <div class="container dipper mt-4" style="padding: 0px; margin-top: 20px">
+        <div
+          class="up d-flex flex-wrap justify-content-md-center justify-content-lg-between text-md-center text-lg-start"
+        >
+          <!-- Company Info -->
+          <div
+            class="company col-12 col-md-6 col-lg-3 d-flex flex-column align-items-md-center align-items-lg-start mt-md-3"
+          >
+            <div class="d-flex align-items-center text-md-center text-lg-start">
+              <img src="./images/plant 1.png" alt="" width="35px" />
+              <p
+                style="
+                  margin: 0;
+                  font-weight: bold;
+                  font-size: 30px;
+                  padding-left: 8px;
+                "
+              >
+                Ecobazar
+              </p>
             </div>
-            <p style="margin: 0">
+            <p style="margin: 10px 0px">
               Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis
               dui, eget bibendum magna congue nec.
             </p>
-            <p style="margin: 0">(219) 555-0114</p>
-            <p style="margin: 0">or</p>
-            <p style="margin: 0">Proxy@gmail.com</p>
+            <div
+              class="d-flex gap-2 justify-content-md-center justify-content-lg-start"
+            >
+              <p
+                style="
+                  margin: 0;
+                  padding-bottom: 10px;
+                  border-bottom: 1.5px solid #20b526;
+                "
+              >
+                (219) 555-0114
+              </p>
+              <p style="margin: 0">or</p>
+              <p
+                style="
+                  margin: 0;
+                  padding-bottom: 10px;
+                  border-bottom: 1.5px solid #20b526;
+                "
+              >
+                Proxy@gmail.com
+              </p>
+            </div>
           </div>
 
-          <div class="linksall d-flex flex-wrap gap-5">
-            <div>
-              <h3 style="font-size: 16px">My Account</h3>
-              <ul style="padding: 0; list-style: none">
-                <li>
-                  <a href="" style="text-decoration: none; color: black"
+          <!-- Links Section -->
+          <div
+            class="linksall row g-4 justify-content-sm-center justify-content-md-center text-md-center text-lg-start mt-md-3 mt-sm-3"
+          >
+            <!-- Column 1 -->
+            <div
+              class="col-6 col-md-3 d-flex flex-column align-items-md-center align-items-lg-start"
+            >
+              <h3 style="font-size: 16px; margin-bottom: 20px">My Account</h3>
+              <ul style="padding: 0; list-style: none; color: white">
+                <li style="margin-bottom: 7px">
+                  <a href="#" style="text-decoration: none; color: white"
                     >My Account</a
                   >
                 </li>
-                <li>
-                  <a href="" style="text-decoration: none; color: black"
+                <li style="margin-bottom: 7px">
+                  <a href="#" style="text-decoration: none; color: white"
                     >Order History</a
                   >
                 </li>
-                <li>
-                  <a href="" style="text-decoration: none; color: black"
+                <li style="margin-bottom: 7px">
+                  <a href="#" style="text-decoration: none; color: white"
                     >Shopping Cart</a
                   >
                 </li>
                 <li>
-                  <a href="" style="text-decoration: none; color: black"
+                  <a href="#" style="text-decoration: none; color: white"
                     >Wishlist</a
                   >
                 </li>
               </ul>
             </div>
-            <div>
-              <h3 style="font-size: 16px">Proxy</h3>
-              <ul style="padding: 0; list-style: none">
-                <li>
-                  <a href="" style="text-decoration: none; color: black"
-                    >FAQs</a
-                  >
-                </li>
-                <li>
-                  <a href="" style="text-decoration: none; color: black"
-                    >Shipping Info</a
-                  >
-                </li>
-                <li>
-                  <a href="" style="text-decoration: none; color: black"
-                    >Returns</a
-                  >
-                </li>
-                <li>
-                  <a href="" style="text-decoration: none; color: black"
-                    >Support</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 style="font-size: 16px">Categories</h3>
-              <ul style="padding: 0; list-style: none">
-                <li>
-                  <a href="" style="text-decoration: none; color: black"
-                    >My Account</a
-                  >
-                </li>
-                <li>
-                  <a href="" style="text-decoration: none; color: black"
-                    >Order History</a
-                  >
-                </li>
-                <li>
-                  <a href="" style="text-decoration: none; color: black"
-                    >Shopping Cart</a
-                  >
-                </li>
-                <li>
-                  <a href="" style="text-decoration: none; color: black"
-                    >Wishlist</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 style="font-size: 16px">Helps</h3>
-              <ul style="padding: 0; list-style: none">
-                <li>
-                  <a href="" style="text-decoration: none; color: black"
-                    >FAQs</a
-                  >
-                </li>
-                <li>
-                  <a href="" style="text-decoration: none; color: black"
-                    >Shipping Info</a
-                  >
-                </li>
-                <li>
-                  <a href="" style="text-decoration: none; color: black"
-                    >Returns</a
-                  >
-                </li>
-                <li>
-                  <a href="" style="text-decoration: none; color: black"
-                    >Support</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
 
-        <div
-          class="dip d-flex justify-content-between align-items-center mt-4 flex-wrap"
-          style="padding-top: 10px; border-top: 1px solid #ddd"
-        >
-          <div class="lef">
-            <p style="margin: 0">
-              Ecobazar eCommerce © 2021. All Rights Reserved
-            </p>
-          </div>
-          <div class="rig d-flex gap-3">
-            <div>
-              <img src="./images/Cart.png" alt="" style="width: 40px" />
+            <!-- Column 2 -->
+            <div
+              class="col-6 col-md-3 d-flex flex-column align-items-md-center align-items-lg-start"
+            >
+              <h3 style="font-size: 16px; margin-bottom: 20px">Proxy</h3>
+              <ul style="padding: 0; list-style: none">
+                <li style="margin-bottom: 7px">
+                  <a href="#" style="text-decoration: none; color: white"
+                    >FAQs</a
+                  >
+                </li>
+                <li style="margin-bottom: 7px">
+                  <a href="#" style="text-decoration: none; color: white"
+                    >Shipping Info</a
+                  >
+                </li>
+                <li style="margin-bottom: 7px">
+                  <a href="#" style="text-decoration: none; color: white"
+                    >Returns</a
+                  >
+                </li>
+                <li>
+                  <a href="#" style="text-decoration: none; color: white"
+                    >Support</a
+                  >
+                </li>
+              </ul>
             </div>
-            <div>
-              <img
-                src="./images/Method=ApplePay.png"
-                alt=""
-                style="width: 40px"
-              />
+
+            <!-- Column 3 -->
+            <div
+              class="col-6 col-md-3 d-flex flex-column align-items-md-center align-items-lg-start"
+            >
+              <h3 style="font-size: 16px; margin-bottom: 20px">Categories</h3>
+              <ul style="padding: 0; list-style: none">
+                <li style="margin-bottom: 7px">
+                  <a href="#" style="text-decoration: none; color: white"
+                    >Electronics</a
+                  >
+                </li>
+                <li style="margin-bottom: 7px">
+                  <a href="#" style="text-decoration: none; color: white"
+                    >Fashion</a
+                  >
+                </li>
+                <li style="margin-bottom: 7px">
+                  <a href="#" style="text-decoration: none; color: white"
+                    >Groceries</a
+                  >
+                </li>
+                <li>
+                  <a href="#" style="text-decoration: none; color: white"
+                    >Home & Living</a
+                  >
+                </li>
+              </ul>
             </div>
-            <div>
-              <img
-                src="./images/Method=Mastercard.png"
-                alt=""
-                style="width: 40px"
-              />
-            </div>
-            <div>
-              <img
-                src="./images/Method=Discover.png"
-                alt=""
-                style="width: 40px"
-              />
-            </div>
-            <div>
-              <img src="./images/Method=Visa.png" alt="" style="width: 40px" />
+
+            <!-- Column 4 -->
+            <div
+              class="col-6 col-md-3 d-flex flex-column align-items-md-center align-items-lg-start"
+            >
+              <h3 style="font-size: 16px; margin-bottom: 20px">Helps</h3>
+              <ul style="padding: 0; list-style: none">
+                <li style="margin-bottom: 7px">
+                  <a href="#" style="text-decoration: none; color: white"
+                    >FAQs</a
+                  >
+                </li>
+                <li style="margin-bottom: 7px">
+                  <a href="#" style="text-decoration: none; color: white"
+                    >Shipping Info</a
+                  >
+                </li>
+                <li style="margin-bottom: 7px">
+                  <a href="#" style="text-decoration: none; color: white"
+                    >Returns</a
+                  >
+                </li>
+                <li>
+                  <a href="#" style="text-decoration: none; color: white"
+                    >Support</a
+                  >
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-
   </body>
 </html>
